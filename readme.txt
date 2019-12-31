@@ -27,3 +27,14 @@ git reset命令既可以回退版本，也可以把暂存区的修改回退到�
 其他版本控制系统如SVN等都有分支管理，但是用过之后你会发现，这些版本控制系统创建和切换分支比蜗牛还慢，简直让人无法忍受，结果分支功能成了摆设，大家都不去用。
 
 但Git的分支是与众不同的，无论创建、切换和删除分支，Git在1秒钟之内就能完成！无论你的版本库是1个文件还是1万个文件。
+
+首先，我们创建dev分支，然后切换到dev分支：
+
+$ git checkout -b dev
+Switched to a new branch 'dev'
+git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+
+$ git branch dev
+$ git checkout dev
+Switched to branch 'dev'
+然后，用git branch命令查看当前分支：
