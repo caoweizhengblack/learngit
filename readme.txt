@@ -34,7 +34,9 @@ $ git checkout -b dev
 Switched to a new branch 'dev'
 git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
 
-$ git branch dev
-$ git checkout dev
+1.$ git branch dev
+2.$ git checkout dev
 Switched to branch 'dev'
 然后，用git branch命令查看当前分支：
+
+冲突怎么办
