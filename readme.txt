@@ -40,3 +40,31 @@ Switched to branch 'dev'
 然后，用git branch命令查看当前分支：
 
 冲突怎么办
+
+现在，我们把dev分支的工作成果合并到master分支上：
+
+$ git merge dev
+Updating d46f35e..b17d20e
+Fast-forward
+ readme.txt | 1 +
+ 1 file changed, 1 insertion(+)
+git merge命令用于合并指定分支到当前分支。合并后，再查看readme.txt的内容，就可以看到，和dev分支的最新提交是完全一样的。
+
+注意到上面的Fast-forward信息，Git告诉我们，这次合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快。
+
+合并完成后，就可以放心地删除dev分支了：
+
+$ git branch -d dev
+
+switch（Git 2.23版本后）
+我们注意到切换分支使用git checkout <branch>，而前面讲过的撤销修改则是git checkout -- <file>，同一个命令，有两种作用，确实有点令人迷惑。
+
+实际上，切换分支这个动作，用switch更科学。因此，最新版本的Git提供了新的git switch命令来切换分支：
+
+创建并切换到新的dev分支，可以使用：
+
+$ git switch -c dev
+直接切换到已有的master分支，可以使用：
+
+$ git switch master
+使用新的git switch命令，比git checkout要更容易理解。
