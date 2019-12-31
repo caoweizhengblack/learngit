@@ -68,3 +68,6 @@ $ git switch -c dev
 
 $ git switch master
 使用新的git switch命令，比git checkout要更容易理解。
+
+
+dev\
